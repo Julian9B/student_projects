@@ -6,7 +6,20 @@ using namespace std;
 int main(){
 
 	// definicja wektora
-	vector<int> numbers({0, 73, 5, 14, 0});
+	vector<int> numbers;
+	int length;
+
+	cout << "Podaj ilosc elementow: ";
+	cin >> length;
+	cout << endl;
+
+	for(int i = 0; i < length; i++)
+	{
+		int a;
+		cout << "Podaj element " << i << ": ";
+		cin >> a;
+		numbers.push_back(a);
+	}
 
 
 	// sortowanie

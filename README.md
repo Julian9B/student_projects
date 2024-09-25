@@ -1,7 +1,7 @@
 # Student projects
 
 ## About
-These are various projects done on my school excercises. They contain some C++ code, as well as Python and HTML.
+These are various projects done on my school exercises. They contain some C++ code, as well as Python and HTML.
 
 ## Credits
 To Mr. Filipak, some nice teacher.  
