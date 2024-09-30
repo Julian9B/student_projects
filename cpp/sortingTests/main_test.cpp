@@ -5,7 +5,7 @@
 #include "gtest/gtest.h"
 #include <chrono>
 
-std::vector<int> vec(10000); // Tworzymy wektor z 10000 losowymi liczbami
+std::vector<int> originalVec(10000); // Tworzymy wektor z 10000 losowymi liczbami
 
 // Funkcja sortująca wektor za pomocą QuickSort
 void quickSort(std::vector<int>& originalVec)
@@ -52,7 +52,7 @@ TEST(BenchmarkTest, QuickSortBenchmark) {
     // Początek pomiaru czasu
     auto start = std::chrono::high_resolution_clock::now();
 
-    quickSort(vec); // Sortujemy wektor
+    quickSort(originalVec); // Sortujemy wektor
 
     // Koniec pomiaru czasu
     auto end = std::chrono::high_resolution_clock::now();
@@ -67,7 +67,7 @@ TEST(BenchmarkTest, BubbleSortBenchmark) {
     // Początek pomiaru czasu
     auto start = std::chrono::high_resolution_clock::now();
 
-    bubbleSort(vec); // Sortujemy wektor
+    bubbleSort(originalVec); // Sortujemy wektor
 
     // Koniec pomiaru czasu
     auto end = std::chrono::high_resolution_clock::now();
@@ -80,7 +80,7 @@ TEST(BenchmarkTest, BubbleSortBenchmark) {
 int main(int argc, char **argv) {
 
     std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
-    std::generate(vec.begin(), vec.end(), std::rand);
+    std::generate(originalVec.begin(), originalVec.end(), std::rand);
 
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
