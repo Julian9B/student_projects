@@ -7,19 +7,14 @@ int main(){
 
 	// definicja wektora
 	vector<int> numbers;
-	int length;
+	int value = 1;
 
-	cout << "Podaj ilosc elementow: ";
-	cin >> length;
-	cout << endl;
-
-	for(int i = 0; i < length; i++)
-	{
-		int a;
-		cout << "Podaj element " << i << ": ";
-		cin >> a;
-		numbers.push_back(a);
+	while(value != 0){
+		cout << "Podaj kolejny element lub '0' aby zakonczyc: ";
+		cin >> value;
+		numbers.push_back(value);
 	}
+	cout << endl;
 
 
 	// sortowanie
@@ -42,6 +37,7 @@ int main(){
 	{
 		cout << numbers[i] << endl;
 	}
+	cout << endl;
 
 	return 0;
 }

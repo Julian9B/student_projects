@@ -5,6 +5,8 @@
 #include "gtest/gtest.h"
 #include <chrono>
 
+std::vector<int> vec(10000); // Tworzymy wektor z 10000 losowymi liczbami
+
 // Funkcja sortująca wektor za pomocą QuickSort
 void quickSort(std::vector<int>& vec)
 {
@@ -23,6 +25,7 @@ void quickSort(std::vector<int>& vec)
     vec.insert(vec.end(), right.begin(), right.end());
 }
 
+// Funkcja sortująca wektor za pomocą bubblesort
 void bubbleSort(std::vector<int>& vec)
 {
     for(int j = 0; j < vec.size() - 1; j++)
@@ -41,9 +44,6 @@ void bubbleSort(std::vector<int>& vec)
 
 // Test wydajności sortowania QuickSort
 TEST(BenchmarkTest, QuickSortBenchmark) {
-    std::vector<int> vec(10000); // Tworzymy wektor z 10000 losowymi liczbami
-    std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
-    std::generate(vec.begin(), vec.end(), std::rand);
 
     // Początek pomiaru czasu
     auto start = std::chrono::high_resolution_clock::now();
@@ -57,10 +57,8 @@ TEST(BenchmarkTest, QuickSortBenchmark) {
     std::cout << "Czas sortowania: " << elapsed_seconds.count() << "s\n";
 }
 
+// Test wydajności sortowania bubblesort
 TEST(BenchmarkTest, BubbleSortBenchmark) {
-    std::vector<int> vec(10000); // Tworzymy wektor z 10000 losowymi liczbami
-    std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
-    std::generate(vec.begin(), vec.end(), std::rand);
 
     // Początek pomiaru czasu
     auto start = std::chrono::high_resolution_clock::now();
@@ -76,6 +74,10 @@ TEST(BenchmarkTest, BubbleSortBenchmark) {
 
 
 int main(int argc, char **argv) {
+
+    std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
+    std::generate(vec.begin(), vec.end(), std::rand);
+
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
