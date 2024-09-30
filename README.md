@@ -8,7 +8,7 @@ To Mr. Filipak, some nice teacher.
 [His Github](https://github.com/marcin-filipiak)
 
 ## Screenshots
-![Result of tests](images/Przechwytywanie.PNG)
+![Result of tests](images/TestResult.PNG)
 
 ## Codes
 Empty C++ code:  
