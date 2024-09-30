@@ -8,8 +8,10 @@
 std::vector<int> vec(10000); // Tworzymy wektor z 10000 losowymi liczbami
 
 // Funkcja sortująca wektor za pomocą QuickSort
-void quickSort(std::vector<int>& vec)
+void quickSort(std::vector<int>& originalVec)
 {
+    std::vector<int> vec = originalVec;
+
     if (vec.size() <= 1) return;
     int pivot = vec[vec.size() / 2];
     std::vector<int> left, right;
@@ -26,8 +28,10 @@ void quickSort(std::vector<int>& vec)
 }
 
 // Funkcja sortująca wektor za pomocą bubblesort
-void bubbleSort(std::vector<int>& vec)
+void bubbleSort(std::vector<int>& originalVec)
 {
+    std::vector<int> vec = originalVec;
+
     for(int j = 0; j < vec.size() - 1; j++)
     {
 	for(int i = 0; i < vec.size() - 1; i++)
