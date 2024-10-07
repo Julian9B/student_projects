@@ -71,7 +71,10 @@ int main(int argc, char **argv) {
 }
 ```
 
-The rest of files are compilers and thing like that.
+After compiling, we can see that the code works perfectly well:
+![Result in console](../../images/FizzbuzzResult.PNG)
+
+The rest of files are compilers and things like that. Thanks for your time!
 
 ## Authors
 [Julian9B](https://github.com/Julian9B)
