@@ -4,9 +4,9 @@
 
 FizzBuzz is very simple exercise of assertion using gtests.
 
-## Content
+## Code
 
-First, we have a file called 'functions.cpp' where we have one function. It returns 'Fizz' when given number is divided by 3, 'Buzz' when divided by 5, and 'FizzBuzz' when divided by both.
+Firstly, we have a file called 'functions.cpp' where we have one function. It returns 'Fizz' when given number is divided by 3, 'Buzz' when divided by 5, and 'FizzBuzz' when divided by both.
 
 ```cpp
 string fizzbuzz(int number) {
@@ -71,10 +71,15 @@ int main(int argc, char **argv) {
 }
 ```
 
+The rest of files are compilers and things like that.
+
+## Result
+
 After compiling, we can see that the code works perfectly well:
+ 
 ![Result in console](../../images/FizzbuzzResult.PNG)
 
-The rest of files are compilers and things like that. Thanks for your time!
+Thanks for your time!
 
 ## Authors
 [Julian9B](https://github.com/Julian9B)
