@@ -159,7 +159,7 @@ Other files in folder are compilers and things like that.
 ![Result in console](../../images/TestResult.PNG)
 
 ## Conclusion
-From the test we can clearly assume that Quicksort is a lot faster than Bubblesort.
+From the test we can clearly conclude that Quicksort is a lot faster than Bubblesort.
 
 ## Authors
 [Julian9B](https://github.com/Julian9B)
