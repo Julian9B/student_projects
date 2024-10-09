@@ -4,6 +4,26 @@
 
 FizzBuzz is very simple exercise of assertion using gtests.
 
+## Libraries
+
+All includes and usings we need:
+
+```cpp
+// fuctions.cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
+// main_test.cpp
+#include <gtest/gtest.h>
+#include "functions.cpp"
+
+// main.cpp
+#include <iostream>
+#include <string>
+#include "functions.cpp"
+```
+
 ## Code
 
 Firstly, we have a file called 'functions.cpp' where we have one function. It returns 'Fizz' when given number is divided by 3, 'Buzz' when divided by 5, and 'FizzBuzz' when divided by both.
