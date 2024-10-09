@@ -99,6 +99,10 @@ After compiling, we can see that the code works perfectly well:
  
 ![Result in console](../../images/FizzbuzzResult.PNG)
 
+And so does it in main program:
+ 
+![Result in console](../../images/MainFizzbuzzResult.PNG)
+
 Thanks for your time!
 
 ## Authors
