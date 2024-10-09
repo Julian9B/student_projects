@@ -5,6 +5,19 @@ This is simple excercise with testing.
  
 We use this code to check which method of choice is faster - If or Switch.
 
+## Libraries
+
+Here we have all includes and usings we need:
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <ctime>
+#include "gtest/gtest.h"
+#include <chrono>
+using namespace std;
+```
+
 ## Code
 
 Firstly, we have two functions in file 'main_test.cpp': one for If and the other one for Switch.
