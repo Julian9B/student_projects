@@ -3,7 +3,7 @@
 ## About
 This is simple excercise with sorting and testing. 
  
-The code creates vector consisting 10000 random numbers and sorts it in 2 ways - Quicksort and Bubblesort, using unit testing. It also measures time and says which method is faster.
+The code sorts vector in 2 ways - Quicksort and Bubblesort, using unit testing. It also measures time and says which method is faster.
 
 ## Code
 
@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-Now, in the file we have two functions - one sorting vector elements using BubbleSort, and the other one using QuickSort.
+Now, in the file we have two functions, creating copy of vector and sorting it's elements - one using BubbleSort, and the other one using QuickSort.
 
 ```cpp
 // Funkcja sortująca wektor za pomocą QuickSort
@@ -136,7 +136,7 @@ TEST(BenchmarkTest, BubbleSortBenchmark) {
 }
 ```
 
-To compare them, we create vector with 10000 random numbers, and let both functions sort copies of it.
+To compare them, we create vector with 10000 random numbers, and send it to both algorithms.
 
 ```cpp
 std::vector<int> originalVec(10000); // Tworzymy wektor z 10000 losowymi liczbami
