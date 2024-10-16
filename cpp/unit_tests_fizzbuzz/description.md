@@ -64,22 +64,22 @@ But first we want to make sure the 'fizzbuzz' function is working properly. That
 
 TEST(fizzbuzz_tests, fizz) {
 
-    EXPECT_EQ(fizzbuzz(6), "Fizz");
+    EXPECT_EQ(fizzbuzz(6), "Fizz"); // Function should return 'Fizz' for 6.
 }
 
 TEST(fizzbuzz_tests, buzz) {
 
-    EXPECT_EQ(fizzbuzz(10), "Buzz");
+    EXPECT_EQ(fizzbuzz(10), "Buzz"); // Function should return 'Buzz' for 10.
 }
 
 TEST(fizzbuzz_tests, fizzbuzz) {
 
-    EXPECT_EQ(fizzbuzz(15), "FizzBuzz");
+    EXPECT_EQ(fizzbuzz(15), "FizzBuzz"); // Function should return 'FizzBuzz' for 15.
 }
 
 TEST(fizzbuzz_tests, nothing) {
 
-    EXPECT_EQ(fizzbuzz(22), "");
+    EXPECT_EQ(fizzbuzz(22), ""); // Function should return nothing for 22.
 }
 
 
