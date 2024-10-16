@@ -112,9 +112,13 @@ int main(int argc, char **argv) {
 ```
 
 ## 3. Result
+
 ![Result in console](../../images/IfSwitchResult.PNG)
 
+The test shows us that the difference between execution time on such amount of data is very small. However, we can see that it took slightly less time for Switch to execute.
+
 ## 4. Conclusion
+
 From the test we can see that Switch instruction is faster than If.
 
 ## Authors
