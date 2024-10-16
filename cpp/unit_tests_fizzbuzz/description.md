@@ -93,7 +93,7 @@ The rest of files are compilers and things like that.
 
 ## 3. Result
 
-After compiling, we can see that the code works perfectly well:
+After compiling, we can see that the function works perfectly well:
  
 ![Result of testing in console](../../images/FizzbuzzResult.PNG)
 
