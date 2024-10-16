@@ -159,6 +159,8 @@ Other files in folder are compilers and things like that.
 
 ![Result in console](../../images/TestResult.PNG)
 
+Test show that it took 13ms for QuickSort to sort our vector, while it took 475ms for BubbleSort to do that.
+
 ## 4. Conclusion
 
 From the test we can clearly conclude that Quicksort is a lot faster than Bubblesort.
