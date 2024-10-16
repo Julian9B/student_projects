@@ -1,9 +1,7 @@
 # Sorting tests
 
 ## 1. About
-This is simple excercise with sorting and testing. 
- 
-The code sorts vector in 2 ways - Quicksort and Bubblesort, using unit testing. It also measures time and says which method is faster.
+This is simple excercise with sorting and testing. The code sorts vector in 2 ways - Quicksort and Bubblesort, using unit testing. It also measures time and says which method is faster.
 
 ## 2. Code
 
