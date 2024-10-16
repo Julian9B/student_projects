@@ -1,11 +1,13 @@
 # Sorting tests
 
-## About
+## 1. About
 This is simple excercise with sorting and testing. 
  
 The code sorts vector in 2 ways - Quicksort and Bubblesort, using unit testing. It also measures time and says which method is faster.
 
-## Code
+## 2. Code
+
+### 2.1. Template
 
 The file 'main_test.cpp', which we can see here, I started from test template, including only Quicksort:
 ```cpp
@@ -58,6 +60,8 @@ int main(int argc, char **argv) {
     return RUN_ALL_TESTS();
 }
 ```
+
+### 2.2. Current code
 
 Now, in the file we have two functions, creating copy of vector and sorting it's elements - one using BubbleSort, and the other one using QuickSort.
 
@@ -155,10 +159,10 @@ int main(int argc, char **argv) {
 
 Other files in folder are compilers and things like that.
 
-## Result
+## 3. Result
 ![Result in console](../../images/TestResult.PNG)
 
-## Conclusion
+## 4. Conclusion
 From the test we can clearly conclude that Quicksort is a lot faster than Bubblesort.
 
 ## Authors
