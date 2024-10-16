@@ -1,34 +1,20 @@
 # FizzBuzz
 
-## About
+## 1. About
 
-FizzBuzz is very simple exercise of assertion using gtests.
+FizzBuzz is very simple exercise of assertion using gtests. In this exercise we create a function, test it in benchmarks and use it in final code.
 
-## Libraries
+## 2. Code
 
-All includes and usings we need:
-
-```cpp
-// fuctions.cpp
-#include <iostream>
-#include <string>
-using namespace std;
-
-// main_test.cpp
-#include <gtest/gtest.h>
-#include "functions.cpp"
-
-// main.cpp
-#include <iostream>
-#include <string>
-#include "functions.cpp"
-```
-
-## Code
+### 2.1. Functions
 
 Firstly, we have a file called 'functions.cpp' where we have one function. It returns 'Fizz' when given number is divided by 3, 'Buzz' when divided by 5, and 'FizzBuzz' when divided by both.
 
 ```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
 string fizzbuzz(int number) {
 
     string result = "";
@@ -45,9 +31,16 @@ string fizzbuzz(int number) {
 }
 ```
 
+### 2.2. Main program
+
 We want to use this function in our 'main.cpp' file with random numbers (I know it's silly but hey it's only a school exercise).
 
 ```cpp
+#include <iostream>
+#include <string>
+#include "functions.cpp"
+using namespace std;
+
 int main() {
 
     srand(time(0));
@@ -61,9 +54,14 @@ int main() {
 }
 ```
 
+### 2.3 Tests
+
 But first we want to make sure the 'fizzbuzz' function is working properly. That's why we have 'main_test.cpp' file, where we test it using gtests, for different numbers.
 
 ```cpp
+#include <gtest/gtest.h>
+#include "functions.cpp"
+
 TEST(fizzbuzz_tests, fizz) {
 
     EXPECT_EQ(fizzbuzz(6), "Fizz");
@@ -93,7 +91,7 @@ int main(int argc, char **argv) {
 
 The rest of files are compilers and things like that.
 
-## Result
+## 3. Result
 
 After compiling, we can see that the code works perfectly well:
  
@@ -103,6 +101,10 @@ And so does it in main program:
  
 ![Result of main file in console](../../images/MainFizzbuzzResult.PNG)
 
+## 4. Conclusion
+
+From this exercise we can learn that tests such benchmarks allow us to check our code and make sure it works as expected.
+ 
 Thanks for your time!
 
 ## Authors
