@@ -18,7 +18,7 @@ The file 'main_test.cpp', which we can see here, I started from test template, i
 #include "gtest/gtest.h"
 #include <chrono>
 
-// Funkcja sortująca wektor za pomocą QuickSort
+// QuickSort function
 void quickSort(std::vector<int>& vec)
 {
     if (vec.size() <= 1) return;
@@ -36,19 +36,19 @@ void quickSort(std::vector<int>& vec)
     vec.insert(vec.end(), right.begin(), right.end());
 }
 
-// Test wydajności sortowania QuickSort
+// QuickSort efficiency test
 TEST(BenchmarkTest, QuickSortBenchmark) {
 
     std::vector<int> originalVec(10000); // Tworzymy wektor z 10000 losowymi liczbami
     std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
     std::generate(originalVec.begin(), originalVec.end(), std::rand);
     
-    // Początek pomiaru czasu
+    // Timing start
     auto start = std::chrono::high_resolution_clock::now();
 
     quickSort(originalVec); // Sortujemy wektor
 
-    // Koniec pomiaru czasu
+    // Timing end
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed_seconds = end - start;
 
@@ -63,10 +63,10 @@ int main(int argc, char **argv) {
 
 ### 2.2. Current code
 
-Now, in the file we have two functions, creating copy of vector and sorting it's elements - one using BubbleSort, and the other one using QuickSort.
+Now, in the file we have two functions, creating copy of original vector and sorting it's elements - one using BubbleSort, and the other one using QuickSort.
 
 ```cpp
-// Funkcja sortująca wektor za pomocą QuickSort
+// QuickSort function
 void quickSort(std::vector<int>& originalVec)
 {
     std::vector<int> vec = originalVec;
@@ -86,7 +86,7 @@ void quickSort(std::vector<int>& originalVec)
     vec.insert(vec.end(), right.begin(), right.end());
 }
 
-// Funkcja sortująca wektor za pomocą bubblesort
+// BubbleSort function
 void bubbleSort(std::vector<int>& originalVec)
 {
     std::vector<int> vec = originalVec;
@@ -109,30 +109,30 @@ void bubbleSort(std::vector<int>& originalVec)
 We test execution time of them both in gtests.
 
 ```cpp
-// Test wydajności sortowania QuickSort
+// QuickSort efficiency test
 TEST(BenchmarkTest, QuickSortBenchmark) {
 
-    // Początek pomiaru czasu
+    // Timing start
     auto start = std::chrono::high_resolution_clock::now();
 
     quickSort(originalVec); // Sortujemy wektor
 
-    // Koniec pomiaru czasu
+    // Timing end
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed_seconds = end - start;
 
     std::cout << "Czas sortowania: " << elapsed_seconds.count() << "s\n";
 }
 
-// Test wydajności sortowania bubblesort
+// BubbleSort efficiency test
 TEST(BenchmarkTest, BubbleSortBenchmark) {
 
-    // Początek pomiaru czasu
+    // Timing start
     auto start = std::chrono::high_resolution_clock::now();
 
     bubbleSort(originalVec); // Sortujemy wektor
 
-    // Koniec pomiaru czasu
+    // Timing end
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed_seconds = end - start;
 
@@ -144,9 +144,7 @@ To compare them, we create vector with 10000 random numbers, and send it to both
 
 ```cpp
 std::vector<int> originalVec(10000); // Tworzymy wektor z 10000 losowymi liczbami
-```
 
-```cpp
 int main(int argc, char **argv) {
 
     std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
@@ -160,9 +158,11 @@ int main(int argc, char **argv) {
 Other files in folder are compilers and things like that.
 
 ## 3. Result
+
 ![Result in console](../../images/TestResult.PNG)
 
 ## 4. Conclusion
+
 From the test we can clearly conclude that Quicksort is a lot faster than Bubblesort.
 
 ## Authors
