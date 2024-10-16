@@ -1,9 +1,7 @@
 # Benchmark If & Switch
 
 ## 1. About
-This is simple excercise with testing. 
- 
-We use this code to check which method of choice is faster - If or Switch.
+This is simple excercise with testing. We use this code to check which method of choice is faster - If or Switch.
 
 ## 2. Code
 
