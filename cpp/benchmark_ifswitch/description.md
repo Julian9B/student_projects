@@ -1,11 +1,15 @@
 # Benchmark If & Switch
 
-## About
+## 1. About
 This is simple excercise with testing. 
  
 We use this code to check which method of choice is faster - If or Switch.
 
-## Libraries
+## 2. Code
+
+We have all code in 'main_test.cpp'.
+
+### 2.1 Libraries
 
 Here we have all includes and usings we need:
 
@@ -18,12 +22,12 @@ Here we have all includes and usings we need:
 using namespace std;
 ```
 
-## Code
+### 2.2. IF and SWITCH
 
-Firstly, we have two functions in file 'main_test.cpp': one for If and the other one for Switch.
+Firstly, we have two functions: one for If and the other one for Switch.
 
 ```cpp
-// Funkcja sprawdzająca if
+// Function with if
 void if_check(int number) {
 
     if(number > 0) {
@@ -33,7 +37,7 @@ void if_check(int number) {
     }
 }
 
-// Funkcja sprawdzająca switch
+// Function with switch
 void switch_check(int number){
 
     switch(number > 0) {
@@ -47,6 +51,8 @@ void switch_check(int number){
 }
 ```
 
+### 2.3. Tests
+
 To test it, we use 3 variables for each:
 
 ```cpp
@@ -58,10 +64,10 @@ int number3 = 41;
 We use gtests to measure execution time of both functions.
 
 ```cpp
-// Test wydajności if
+// Test of if's efficiency
 TEST(BenchmarkTest, IfBenchmark) {
 
-    // Początek pomiaru czasu
+    // Timing start
     auto start = std::chrono::high_resolution_clock::now();
 
     cout << endl;
@@ -69,17 +75,17 @@ TEST(BenchmarkTest, IfBenchmark) {
     if_check(number2);
     if_check(number3);
 
-    // Koniec pomiaru czasu
+    // Timing end
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed_seconds = end - start;
 
     std::cout << "Czas wykonania IF: " << elapsed_seconds.count() << endl << endl;
 }
 
-// Test wydajności switch
+// Test of switch's efficiency
 TEST(BenchmarkTest, switchBenchmark) {
 
-    // Początek pomiaru czasu
+    // Timing start
     auto start = std::chrono::high_resolution_clock::now();
 
     cout << endl;
@@ -87,13 +93,15 @@ TEST(BenchmarkTest, switchBenchmark) {
     switch_check(number2);
     switch_check(number3);
 
-    // Koniec pomiaru czasu
+    // Timing end
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed_seconds = end - start;
 
     std::cout << "Czas wykonania SWITCH: " << elapsed_seconds.count() << endl << endl;
 }
 ```
+
+### Main program
 
 And finally, we call the tests from 'main' function.
 
@@ -105,10 +113,10 @@ int main(int argc, char **argv) {
 }
 ```
 
-## Result
+## 3. Result
 ![Result in console](../../images/IfSwitchResult.PNG)
 
-## Conclusion
+## 4. Conclusion
 From the test we can see that Switch instruction is faster than If.
 
 ## Authors
