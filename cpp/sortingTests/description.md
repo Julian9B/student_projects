@@ -39,14 +39,14 @@ void quickSort(std::vector<int>& vec)
 // QuickSort efficiency test
 TEST(BenchmarkTest, QuickSortBenchmark) {
 
-    std::vector<int> originalVec(10000); // Tworzymy wektor z 10000 losowymi liczbami
-    std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
+    std::vector<int> originalVec(10000); // We create vector with 10000 random numbers
+    std::srand(std::time(0)); // We initialize random numbers generator
     std::generate(originalVec.begin(), originalVec.end(), std::rand);
     
     // Timing start
     auto start = std::chrono::high_resolution_clock::now();
 
-    quickSort(originalVec); // Sortujemy wektor
+    quickSort(originalVec); // We sort our vector
 
     // Timing end
     auto end = std::chrono::high_resolution_clock::now();
@@ -143,11 +143,11 @@ TEST(BenchmarkTest, BubbleSortBenchmark) {
 To compare them, we create vector with 10000 random numbers, and send it to both algorithms.
 
 ```cpp
-std::vector<int> originalVec(10000); // Tworzymy wektor z 10000 losowymi liczbami
+std::vector<int> originalVec(10000); // We create vector with 10000 random numbers
 
 int main(int argc, char **argv) {
 
-    std::srand(std::time(0)); // Inicjalizacja generatora liczb losowych
+    std::srand(std::time(0)); // We initialize random numbers generator
     std::generate(originalVec.begin(), originalVec.end(), std::rand);
 
     ::testing::InitGoogleTest(&argc, argv);
