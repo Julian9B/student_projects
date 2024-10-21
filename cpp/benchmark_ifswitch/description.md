@@ -114,6 +114,7 @@ int main(int argc, char **argv) {
 ## 3. Result
 
 ![Result in console](../../images/IfSwitchResult.PNG)
+Img. 1.
 
 The test shows us that the difference between execution time on such amount of data is very small. However, we can see that it took slightly less time for Switch to execute.
 
