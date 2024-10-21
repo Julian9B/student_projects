@@ -96,10 +96,12 @@ The rest of files are compilers and things like that.
 After compiling, we can see that the function works as expected:
  
 ![Result of testing in console](../../images/FizzbuzzResult.PNG)
+Img. 1.
 
 And so does it in main program:
  
 ![Result of main file in console](../../images/MainFizzbuzzResult.PNG)
+Img. 2.
 
 ## 4. Conclusion
 
