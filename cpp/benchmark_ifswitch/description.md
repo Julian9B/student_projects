@@ -1,7 +1,7 @@
 # Benchmark If & Switch
 
 ## 1. About
-This is simple excercise with testing. We use this code to check which method of choice is faster - If or Switch.
+This is C++ excercise with testing. We use this code to check which method of choice is faster - If or Switch.
 
 ## 2. Code
 
@@ -9,7 +9,7 @@ We have all code in 'main_test.cpp'.
 
 ### 2.1 Libraries
 
-Here we have all includes and usings we need:
+All includes and usings we need:
 
 ```cpp
 #include <iostream>
@@ -59,7 +59,7 @@ int number2 = 0;
 int number3 = 41;
 ```
 
-We use gtests to measure execution time of both functions.
+We use chrono library to measure execution time of both functions.
 
 ```cpp
 // Test of if's efficiency
