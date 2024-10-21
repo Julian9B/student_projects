@@ -1,13 +1,15 @@
 # Sorting tests
 
 ## 1. About
-This is simple excercise with sorting and testing. The code sorts vector in 2 ways - Quicksort and Bubblesort, using unit testing. It also measures time and says which method is faster.
+
+This is C++ excercise about sorting and testing. The code sorts vector in 2 ways - Quicksort and Bubblesort, using unit testing. It also measures time and says which method is faster.
 
 ## 2. Code
 
 ### 2.1. Template
 
-The file 'main_test.cpp', which we can see here, I started from test template, including only Quicksort:
+I started the file 'main_test.cpp' from test template, including only Quicksort:
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -104,7 +106,7 @@ void bubbleSort(std::vector<int>& originalVec)
 }
 ```
 
-We test execution time of them both in gtests.
+We test execution time of them both in gtests, using chrono library.
 
 ```cpp
 // QuickSort efficiency test
@@ -158,6 +160,7 @@ Other files in folder are compilers and things like that.
 ## 3. Result
 
 ![Result in console](../../images/TestResult.PNG)
+Img. 1.
 
 Test show that it took 13ms for QuickSort to sort our vector, while it took 475ms for BubbleSort to do that.
 
