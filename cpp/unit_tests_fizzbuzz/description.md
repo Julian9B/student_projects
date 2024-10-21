@@ -93,12 +93,23 @@ The rest of files are compilers and things like that.
 
 ## 3. Result
 
-After compiling, we can see that the function works as expected:
+Output after compiling and it's breakdown:
  
 ![Result of testing in console](../../images/FizzbuzzResult.PNG)
 Img. 1.
 
-And so does it in main program:
+<br>
+
+| Number | Expected result | Actual Result | GTest result |
+| ------ | --------------- | ------------- | ------------ |
+| 6	 | "Fizz"	   | "Fizz"	   | "OK"	  |
+| 10	 | "Buzz"	   | "Buzz"	   | "OK"	  |
+| 15	 | "FizzBuzz"	   | "FizzBuzz"	   | "OK"	  |
+| 22	 | nothing	   | nothing	   | "OK"	  |
+
+Tab. 1.
+
+In main program our code works as expected as well.
  
 ![Result of main file in console](../../images/MainFizzbuzzResult.PNG)
 Img. 2.
