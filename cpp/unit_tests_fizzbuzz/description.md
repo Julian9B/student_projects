@@ -2,7 +2,7 @@
 
 ## 1. About
 
-FizzBuzz is very simple exercise of assertion using gtests. In this exercise we create a function, test it in benchmarks and use it in final code.
+FizzBuzz is C++ exercise of assertion using gtests. In this exercise we create a function, test it in benchmarks and use it in final code.
 
 ## 2. Code
 
@@ -33,7 +33,7 @@ string fizzbuzz(int number) {
 
 ### 2.2. Main program
 
-We want to use this function in our 'main.cpp' file with random numbers (I know it's silly but hey it's only a school exercise).
+For exercise, we want to use this function in our 'main.cpp' file with random numbers.
 
 ```cpp
 #include <iostream>
@@ -93,7 +93,7 @@ The rest of files are compilers and things like that.
 
 ## 3. Result
 
-After compiling, we can see that the function works perfectly well:
+After compiling, we can see that the function works as expected:
  
 ![Result of testing in console](../../images/FizzbuzzResult.PNG)
 
