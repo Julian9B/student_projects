@@ -18,7 +18,7 @@ int main(){
 
 
 	// sortowanie
-	for(int i = 0; i < (numbers.size() - 1); i++)
+	for(int i = 0; i < numbers.size(); i++)
 	{
 		for(int j = 0; j < (numbers.size() - 1); j++)
 		{
