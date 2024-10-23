@@ -27,7 +27,7 @@ void bubbleSort(std::vector<int>& vec)
 }
 
 
-TEST(BenchmarkTest, RandomBubbleSort) { // 0.809734s
+TEST(BenchmarkTest, RandomBubbleSort) {
 
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -40,7 +40,7 @@ TEST(BenchmarkTest, RandomBubbleSort) { // 0.809734s
 }
 
 
-TEST(BenchmarkTest, OnesBubbleSort) { // 0.480738s
+TEST(BenchmarkTest, OnesBubbleSort) {
 
     auto start = std::chrono::high_resolution_clock::now();
 
