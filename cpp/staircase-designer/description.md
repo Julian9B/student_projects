@@ -2,7 +2,7 @@
 
 ## 1. About
 
-This exercise is about creating app that can design a stairs based on user input data.
+This exercise is about creating app that can design a stairs based on user input data. We start from a console app and modify it to be a window app later.
 
 ### 1.1. Use case
 
@@ -17,9 +17,13 @@ Tab.1.
 
 ### 1.2. The problem
 
-To calculate height and depth of the steps, we first need to calculate their number. We do that by dividing staircase's height by height of ergonomic step's height and rounds the result. Then, the we divide the height of the staircase by number of steps to get exact height of single step. Finally, we divide the length of staircase by number of steps minus one to get the depth of single step.
+To calculate height and depth of the steps, we first need to calculate their number. We do that by dividing staircase's height by height of ergonomic step's height and rounds the result. Then, the we divide the height of the staircase by number of steps to get exact height of single step. Finally, we divide the length of staircase by number of steps minus one (because the last step is already the next floor so we don't need to count it) to get the depth of single step.
  
-If calculated height and depth are very unreal (i.e. 1cm/10cm), the program should return invalid data message. To do that, the program needs to check if their propotions of height to depth fits in ergonomic dimensions of staircase's steps.
+If calculated height and depth are very unreal (i.e. 1cm/10cm), the program should return invalid data message. To do that, we need to check if their propotions of height to depth fits in ergonomic dimensions of staircase's steps.
+
+### 1.3. Plan for code
+
+We need two functions - one for calculating dimensions, and the other one their validation. We're going to have them in 'functions.cpp' file. In the 'main.cpp' file we're going to get user's input, call the functions and returns data or invalid message, based on second function's result.
 
 ## Authors
 [Julian9B](https://github.com/Julian9B)
