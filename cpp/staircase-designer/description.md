@@ -27,15 +27,104 @@ We need two functions - one for validating user data, and the other one for calc
 
 ## 2. Code
 
-### 2.1. Functions file
+### 2.1. Console app
 
-We have two functions in file 'functions.cpp' - one function validates input data, and the other one calculates output data. 
+We start our program as console app.
 
-### 2.2. Main program
+#### Functions file
+
+We have two functions in file 'functions.cpp' - one function validates input data, and the other one calculates output data.
+
+```cpp
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+bool validateDimensions(double heightOverall, double lengthOverall){
+
+	double ratio = heightOverall / lengthOverall; // Height to lentgh ratio
+	double minRatio = 0.5;
+	double maxRatio = 0.9;
+
+	// Checking if height to length ratio fits in our limits
+	if(ratio <= maxRatio && ratio >= minRatio){
+		return true;
+	}
+
+	return false;
+}
+
+
+void calculateDimensions(double heightOverall, double lengthOverall, int& stepsNumber, double& stepHeight, double& stepDepth){
+	
+	// Calculating number of steps
+	double perfectStepHeight = 20;
+	double unroundedStepsNumber = (heightOverall * 100) / perfectStepHeight;
+	stepsNumber = round(unroundedStepsNumber);
+
+	// Calculating step's height
+	stepHeight = (heightOverall * 100) / stepsNumber;
+
+	// Calculating step's depth
+	stepDepth = (lengthOverall * 100) / (stepsNumber - 1);
+}
+```
+
+#### Main program
  
-In the file 'main.cpp' we have 'main' function that gets overall height and length of the staircase from user, then decides whether to calculate output or return an error message, based on result of validating function. 
- 
+In the file 'main.cpp' we have 'main' function that gets overall height and length of the staircase from user, then decides whether to calculate output or return an error message, based on result of validating function.
+
+```cpp
+#include <iostream>
+#include "functions.cpp"
+using namespace std;
+
+
+int main(){
+
+	cout << "Welcome to staircase designer!" << endl << endl;
+
+	// User input
+	double heightOverall;
+	cout << "Enter overall height of the staircase [m]: ";
+	cin >> heightOverall;
+
+	double lengthOverall;
+	cout << "Enter overall length of the staircase [m]: ";
+	cin >> lengthOverall;
+	cout << endl;
+
+	cout << "-- Validating given data. --" << endl;
+	bool possible = validateDimensions(heightOverall, lengthOverall);
+	cout << endl;
+
+	// Checking if the user data is valid
+	if(possible){
+
+		int stepsNumber;
+		double stepHeight;
+		double stepDepth;
+
+		cout << "-- Calculating dimensions of steps. --" << endl;
+		cout << endl;
+		calculateDimensions(heightOverall, lengthOverall, stepsNumber, stepHeight, stepDepth);
+
+		cout << "Number of steps: " << stepsNumber << endl << "Height of each step: " << stepHeight << "cm" << endl << "Depth of each step: " << stepDepth << "cm" << endl << endl;
+
+	}else{
+
+		cout << "Sorry, it is impossible to create ergonomic staircase using dimensions given by you." << endl << endl;
+
+	}
+
+	return 0;
+}
+```
+
 Other files are useful to compile the program.
+
+## 2.2 Window app
 
 ## 3. Result
 
