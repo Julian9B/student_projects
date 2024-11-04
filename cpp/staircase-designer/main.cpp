@@ -8,11 +8,11 @@ int main(){
 	cout << "Welcome to staircase designer!" << endl << endl;
 
 	double heightOverall;
-	cout << "Enter overall height of the staircase [m]: ";
+	cout << "Enter overall height of the staircase [m]: "; // Change to 'Staircase height' and update description
 	cin >> heightOverall;
 
 	double lengthOverall;
-	cout << "Enter overall length of the staircase [m]: ";
+	cout << "Enter overall length of the staircase [m]: "; // Change to 'Staircase length' and update description
 	cin >> lengthOverall;
 	cout << endl;
 
