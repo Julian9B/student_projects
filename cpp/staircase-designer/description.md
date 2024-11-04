@@ -124,7 +124,9 @@ int main(){
 
 Other files are useful to compile the program.
 
-## 2.2 Window app
+### 2.2 Window app
+
+Next, we want to turn our console app into window app.
 
 ## 3. Result
 
