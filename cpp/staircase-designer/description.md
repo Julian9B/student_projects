@@ -130,6 +130,10 @@ Next, we want to turn our console app into window app.
 
 ## 3. Result
 
+### 3.1. Result of console app
+
+### 3.2. Result of window app
+
 ## 4. Conclusion
 
 ## Authors
