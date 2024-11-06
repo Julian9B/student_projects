@@ -1,32 +1,26 @@
 #include <iostream>
 #include <cmath>
+#include <bits/stdc++.h>
 using namespace std;
 
 
-bool validateDimensions(double heightOverall, double lengthOverall){
-	
+bool calculateStaircase(double heightOverall, double lengthOverall, int& stepsNumber, double& stepHeight, double& stepDepth){
+
 	double ratio = heightOverall / lengthOverall;
 	double minRatio = 0.5;
 	double maxRatio = 0.9;
 
-	if(ratio <= maxRatio && ratio >= minRatio){
-		return true;
+	bool possible = ratio <= maxRatio && ratio >= minRatio;
+
+	if(possible){
+		
+		double perfectStepHeight = 20;
+		double unroundedStepsNumber = (heightOverall * 100) / perfectStepHeight;
+
+		stepsNumber = round(unroundedStepsNumber);
+		stepHeight = (heightOverall * 100) / stepsNumber;
+		stepDepth = (lengthOverall * 100) / (stepsNumber - 1);
 	}
 
-	return false;
-}
-
-
-void calculateDimensions(double heightOverall, double lengthOverall, int& stepsNumber, double& stepHeight, double& stepDepth){
-	
-	// Calculating number of steps
-	double perfectStepHeight = 20;
-	double unroundedStepsNumber = (heightOverall * 100) / perfectStepHeight;
-	stepsNumber = round(unroundedStepsNumber);
-
-	// Calculating step's height
-	stepHeight = (heightOverall * 100) / stepsNumber;
-
-	// Calculating step's depth
-	stepDepth = (lengthOverall * 100) / (stepsNumber - 1);
+	return possible;
 }

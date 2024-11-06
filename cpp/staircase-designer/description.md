@@ -87,11 +87,11 @@ int main(){
 
 	// User input
 	double heightOverall;
-	cout << "Enter overall height of the staircase [m]: ";
+	cout << "Staircase height [m]: ";
 	cin >> heightOverall;
 
 	double lengthOverall;
-	cout << "Enter overall length of the staircase [m]: ";
+	cout << "Staircase length [m]: ";
 	cin >> lengthOverall;
 	cout << endl;
 
