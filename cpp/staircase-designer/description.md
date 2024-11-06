@@ -23,118 +23,29 @@ To calculate height and depth of the steps, we first need to calculate their num
 
 ### 1.3. Plan for code
 
-We need two functions - one for validating user data, and the other one for calculating dimensions. We're going to have them in 'functions.cpp' file. In the 'main.cpp' file we're going to get user's input, call the functions and calculate data or return invalid message, based on first function's result.
+We need function, that validates user data, and then calculates dimensions. It returns bool defining if it is possible to create such staircase. Other variables are sent to function as references and filled inside it. We're going to have that function in 'functions.cpp' file. In the 'main.cpp' file we're going to get user's input, call the function and return message, based on function's result.
+
+We are also going to have a file with benchmark tests to check if the function works properly.
 
 ## 2. Code
 
-### 2.1. Console app
-
-We start our program as console app.
-
 #### Functions file
 
-We have two functions in file 'functions.cpp' - one function validates input data, and the other one calculates output data.
+In the file 'functions.cpp' we have the function that validates input data and calculates output data.
 
-```cpp
-#include <iostream>
-#include <cmath>
-using namespace std;
-
-
-bool validateDimensions(double heightOverall, double lengthOverall){
-
-	double ratio = heightOverall / lengthOverall; // Height to lentgh ratio
-	double minRatio = 0.5;
-	double maxRatio = 0.9;
-
-	// Checking if height to length ratio fits in our limits
-	if(ratio <= maxRatio && ratio >= minRatio){
-		return true;
-	}
-
-	return false;
-}
-
-
-void calculateDimensions(double heightOverall, double lengthOverall, int& stepsNumber, double& stepHeight, double& stepDepth){
-	
-	// Calculating number of steps
-	double perfectStepHeight = 20;
-	double unroundedStepsNumber = (heightOverall * 100) / perfectStepHeight;
-	stepsNumber = round(unroundedStepsNumber);
-
-	// Calculating step's height
-	stepHeight = (heightOverall * 100) / stepsNumber;
-
-	// Calculating step's depth
-	stepDepth = (lengthOverall * 100) / (stepsNumber - 1);
-}
-```
+### Test
 
 #### Main program
  
-In the file 'main.cpp' we have 'main' function that gets overall height and length of the staircase from user, then decides whether to calculate output or return an error message, based on result of validating function.
-
-```cpp
-#include <iostream>
-#include "functions.cpp"
-using namespace std;
-
-
-int main(){
-
-	cout << "Welcome to staircase designer!" << endl << endl;
-
-	// User input
-	double heightOverall;
-	cout << "Staircase height [m]: ";
-	cin >> heightOverall;
-
-	double lengthOverall;
-	cout << "Staircase length [m]: ";
-	cin >> lengthOverall;
-	cout << endl;
-
-	cout << "-- Validating given data. --" << endl;
-	bool possible = validateDimensions(heightOverall, lengthOverall);
-	cout << endl;
-
-	// Checking if the user data is valid
-	if(possible){
-
-		int stepsNumber;
-		double stepHeight;
-		double stepDepth;
-
-		cout << "-- Calculating dimensions of steps. --" << endl;
-		cout << endl;
-		calculateDimensions(heightOverall, lengthOverall, stepsNumber, stepHeight, stepDepth);
-
-		cout << "Number of steps: " << stepsNumber << endl << "Height of each step: " << stepHeight << "cm" << endl << "Depth of each step: " << stepDepth << "cm" << endl << endl;
-
-	}else{
-
-		cout << "Sorry, it is impossible to create ergonomic staircase using dimensions given by you." << endl << endl;
-
-	}
-
-	return 0;
-}
-```
+In the file 'main.cpp' we have 'main' function that gets overall height and length of the staircase from user, then calls calculating function and returns pertinent message.
 
 Other files are useful to compile the program.
 
-### 2.2 Window app
-
-Next, we want to turn our console app into window app.
-
 ## 3. Result
 
-### 3.1. Result of console app
-
-### 3.2. Result of window app
-
 ## 4. Conclusion
+
+The same project as window app: 
 
 ## Authors
 [Julian9B](https://github.com/Julian9B)
