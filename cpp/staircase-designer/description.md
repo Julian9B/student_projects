@@ -23,7 +23,7 @@ To calculate height and depth of the steps, we first need to calculate their num
 
 ### 1.3. Plan for code
 
-We need function, that validates user data, and then calculates dimensions. It returns bool defining if it is possible to create such staircase. Other variables are sent to function as references and filled inside it. We're going to have that function in 'functions.cpp' file. In the 'main.cpp' file we're going to get user's input, call the function and return message, based on function's result.
+We need function, that validates user data, and calculates dimensions if valid. It returns bool defining if it is possible to create such staircase. Other variables are sent to function as references and filled inside it. We're going to have that function in 'functions.cpp' file. In the 'main.cpp' file we're going to get user's input, call the function and return message, based on function's result.
 
 We are also going to have a file with benchmark tests to check if the function works properly.
 
@@ -33,11 +33,129 @@ We are also going to have a file with benchmark tests to check if the function w
 
 In the file 'functions.cpp' we have the function that validates input data and calculates output data.
 
+```cpp
+bool calculateStaircase(double heightOverall, double lengthOverall, int& stepsNumber, double& stepHeight, double& stepDepth){
+
+	double ratio = heightOverall / lengthOverall;
+	double minRatio = 0.5;
+	double maxRatio = 0.9;
+
+	// define whether or not it's possible to create an ergonomic staircase
+	bool possible = ratio <= maxRatio && ratio >= minRatio;
+
+	if(possible){
+		
+		double perfectStepHeight = 20;
+		double unroundedStepsNumber = (heightOverall * 100) / perfectStepHeight;
+
+		stepsNumber = round(unroundedStepsNumber);
+		stepHeight = (heightOverall * 100) / stepsNumber;
+		stepDepth = (lengthOverall * 100) / (stepsNumber - 1);
+	}
+
+	return possible;
+}
+```
+
 ### Test
+
+We test the calculating function using gtests in the file called 'main_test.cpp'.
+
+```cpp
+TEST(StaircaseDesignerTests, Valid1) { // input is valid
+
+	double heightOverall = 7;
+	double lengthOverall = 10;
+
+	int stepsNumber;
+	double stepHeight;
+	double stepDepth;
+
+	EXPECT_EQ(calculateStaircase(heightOverall, lengthOverall, stepsNumber, stepHeight, stepDepth), true); // returns true
+	EXPECT_EQ(stepsNumber, 35);
+	EXPECT_EQ(round(stepHeight), 20);
+	EXPECT_EQ(round(stepDepth), 29); // calculates output
+}
+
+TEST(StaircaseDesignerTests, Valid2) { // input is valid
+
+	double heightOverall = 3.5;
+	double lengthOverall = 5;
+
+	int stepsNumber;
+	double stepHeight;
+	double stepDepth;
+
+	EXPECT_EQ(calculateStaircase(heightOverall, lengthOverall, stepsNumber, stepHeight, stepDepth), true); // returns true
+	EXPECT_EQ(stepsNumber, 18);
+	EXPECT_EQ(round(stepHeight), 19);
+	EXPECT_EQ(round(stepDepth), 29); // calculates output
+}
+
+TEST(StaircaseDesignerTests, Invalid1) { // input is invalid
+
+	double heightOverall = 5;
+	double lengthOverall = 3;
+
+	int stepsNumber;
+	double stepHeight;
+	double stepDepth;
+
+	EXPECT_EQ(calculateStaircase(heightOverall, lengthOverall, stepsNumber, stepHeight, stepDepth), false); // returns false and doesn't calculates output
+}
+
+TEST(StaircaseDesignerTests, Invalid2) { // input is invalid
+
+	double heightOverall = 10;
+	double lengthOverall = 30;
+
+	int stepsNumber;
+	double stepHeight;
+	double stepDepth;
+
+	EXPECT_EQ(calculateStaircase(heightOverall, lengthOverall, stepsNumber, stepHeight, stepDepth), false); // returns false and doesn't calculates output
+}
+
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
 
 #### Main program
  
 In the file 'main.cpp' we have 'main' function that gets overall height and length of the staircase from user, then calls calculating function and returns pertinent message.
+
+```cpp
+int main(){
+
+	cout << "Welcome to staircase designer!" << endl << endl;
+
+	double heightOverall;
+	cout << "Staircase height [m]: ";
+	cin >> heightOverall;
+
+	double lengthOverall;
+	cout << "Staircase length [m]: ";
+	cin >> lengthOverall;
+	cout << endl;
+
+	int stepsNumber;
+	double stepHeight;
+	double stepDepth;
+
+	if(calculateStaircase(heightOverall, lengthOverall, stepsNumber, stepHeight, stepDepth)){
+
+		cout << "Number of steps: " << stepsNumber << endl << "Height of each step: " << stepHeight << "cm" << endl << "Depth of each step: " << stepDepth << "cm" << endl << endl; // if input is valid
+	}else{
+
+		cout << "Sorry, it is impossible to create ergonomic staircase using dimensions given by you." << endl << endl; // if input is invalid
+	}
+
+	return 0;
+}
+```
 
 Other files are useful to compile the program.
 
@@ -45,7 +163,9 @@ Other files are useful to compile the program.
 
 ## 4. Conclusion
 
-The same project as window app: 
+In this project, we created a working console app in C++. We can see that benchmarks are useful to check if function is working as desired. Next, we want to make a window app based on that project.
+ 
+You can see the project as a window app by clicking [here](#) (not active yet!).
 
 ## Authors
 [Julian9B](https://github.com/Julian9B)
