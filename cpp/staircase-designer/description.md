@@ -161,11 +161,26 @@ Other files are useful to compile the program.
 
 ## 3. Result
 
+On Img.1. we can see the result of function testing (compilation of 'main_test.cpp' file). All tests end by success.
+ 
+![Result of Benchmark](../../images/staircaseTestResult.png)<br>
+Img. 1.
+ 
+On Img.2. we see the result of compiling 'main.cpp' file and inserting valid data for staircase's dimensions. Program calculates output properly.
+
+![Result of valid data](../../images/staircaseValidResult.png)<br>
+Img. 2.
+
+On Img.3. we see that program throws 'Invalid data' message when we give it invalid data.
+
+![Result of invalid data](../../images/staircaseInvalidResult.png)<br>
+Img. 3.
+
 ## 4. Conclusion
 
 In this project, we created a working console app in C++. We can see that benchmarks are useful to check if function is working as desired. Next, we want to make a window app based on that project.
  
-You can see the project as a window app by clicking [here](#) (not active yet!).
+You can see the project as a window app by clicking [here](https://github.com/Julian9B/student_projects/tree/main/maui/staircase-designer).
 
 ## Authors
 [Julian9B](https://github.com/Julian9B)
