@@ -24,7 +24,7 @@ We base our code on previous Staircase Designer console app. However, we use XAM
 
 ...
 
-You can see the first SD as console app here.
+You can see the first SD as console app [here](https://github.com/Julian9B/student_projects/tree/main/cpp/staircase-designer).
 
 ## Authors
 
