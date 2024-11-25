@@ -2,7 +2,7 @@
 
 ## 1. About
 
-This .NET Maui exercise is about creating a window app that can design a staircase, based on user input data.
+This .NET MAUI exercise is about creating a window app that can design a staircase, based on user input data.
 
 ## 2. Code
 
@@ -99,13 +99,26 @@ private void OverallLengthEntry_TextChanged(object sender, TextChangedEventArgs 
 
 ## 3. Result
 
-...
+On the Image 1. we can see the result of the project's compilation.
+
+![Running application](../../images/SdStart.png)
+Img. 1.
+
+Image 2. shows the result of inserting dimensions, that enable to build an ergonomic staircase.
+
+![Valid input](../../images/SdValidResult.png)
+Img. 2.
+
+If it is impossible to create the staircase with given input, the program shows a message, which we can see on the Image 3.
+
+![Invalid input](../../images/SdInvalidResult.png)
+Img. 3.
 
 ## 4. Conclusion
 
-...
+In this exercise, we created .NET MAUI window app, that enables us to create the staircase.
 
-You can see the first SD as console app [here](https://github.com/Julian9B/student_projects/tree/main/cpp/staircase-designer).
+You can see the first Staircase Designer as console app [here](https://github.com/Julian9B/student_projects/tree/main/cpp/staircase-designer).
 
 ## Authors
 
