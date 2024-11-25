@@ -4,6 +4,17 @@
 
 This .NET MAUI exercise is about creating a window app that can design a staircase, based on user input data.
 
+### 1.1. Use case
+
+| USE CASE       | Staircase designer app |
+| -------------- | ---------------------- |
+| ACTOR          | User of system |
+| GOAL           | User wants to get data about stairs steps' height and depth, based on height and length of an entire staircase |
+| BASIC FLOW     | 1. User opens the app. <br> 2. User enters height and length of the staircase [m] into 'Staircase height' and 'Staircase length' entries. <br> 3. App defines that it is possible to create a staircase with user's data. <br> 4. App calculates number, height and depth of the steps [cm] and returns them to the user. |
+| EXCEPTION FLOW | 1. User opens the app. <br> 2. User enters height and length of the staircase [m] into 'Staircase height' and 'Staircase length' fields. <br> 3. App defines that it is impossible to create a staircase with user's data. <br> 4. App returns an error message to the user. |
+
+Tab.1.
+
 ## 2. Code
 
 We base our code on previous Staircase Designer console app. However, we use XAML for frontend and C# for codebehind instead od using C++.
