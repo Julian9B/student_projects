@@ -8,7 +8,7 @@ This .NET MAUI exercise is about creating a window app that can design a stairca
 
 | USE CASE       | Staircase designer app |
 | -------------- | ---------------------- |
-| ACTOR          | User of system |
+| ACTOR          | A person using system |
 | GOAL           | User wants to get data about stairs steps' height and depth, based on height and length of an entire staircase |
 | BASIC FLOW     | 1. User opens the app. <br> 2. User enters height and length of the staircase [m] into 'Staircase height' and 'Staircase length' entries. <br> 3. App defines that it is possible to create a staircase with user's data. <br> 4. App calculates number, height and depth of the steps [cm] and returns them to the user. |
 | EXCEPTION FLOW | 1. User opens the app. <br> 2. User enters height and length of the staircase [m] into 'Staircase height' and 'Staircase length' fields. <br> 3. App defines that it is impossible to create a staircase with user's data. <br> 4. App returns an error message to the user. |
