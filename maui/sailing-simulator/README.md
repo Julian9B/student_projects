@@ -12,8 +12,6 @@ Img. 1. Different wind directions and position of sails
 
 The player can control the boat by pressing two buttons - turn to port or starboard.
 
-![Concept of game's UI](images/concept.png)
-
 Img. 2. Concept of game's UI
 
 ## 2. Code
