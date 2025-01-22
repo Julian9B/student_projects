@@ -20,7 +20,7 @@ Img. 2. Concept of game's UI
 
 1. The app displays 'Start' button.
 2. When users hits it, the app draws a random angle of rotation, representing wind's direction.
-3. The app displays UI, with the arrow (rotation based on random direction) in center.
+3. The app displays UI, with buttons, boat and the arrow (rotation based on random direction) in center.
 4. When user moves the boat, the app calculates the difference between boat's rotation and wind's direction and adjusts boat's speed.
 5. App changes position of sails, according to boat's positoin relative to wind's direction.
 
