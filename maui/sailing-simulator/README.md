@@ -4,13 +4,13 @@
 
 ### 1.1. Concept
 
-In this projects our plan is to create a kind of game in .NET MAUI. The main mechanics of the game are randomly generated wind direction, speed of the boat and position of sails related to the heading it's facing.
+The goal of this project is to create a kind of video game in .NET MAUI. The application includes mechanics like randomly generated wind direction, speed of the boat and position of sails related to the heading it's facing.
 
 ![Different wind directions and position of sails](images/winds.jpg)
 
 Img. 1. Different wind directions and position of sails
 
-The player can control the boat by pressing two buttons - turn to port or starboard.
+The user can control the boat by pressing two buttons - turn to portside or starboard. The boat's speed is dependent on it's position relative to the wind. The more down-the-wind the boat is, the faster it goes. When it's facing the wind, it will not move at all. The app also automatically manipulates the position of boat's sails in relation with wind's direction.
 
 ![Concept of game's UI](images/concept.png)
 
